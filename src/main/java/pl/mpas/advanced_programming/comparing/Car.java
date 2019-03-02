@@ -17,6 +17,10 @@ public class Car implements Comparable<Car>{
         this.capacity = capacity;
     }
 
+    public void maybeComparing(Comparable<Car> comparable){
+        System.out.println("Inside maybeComparing()" + comparable.compareTo(this));
+    }
+
     @Override
     public String toString() {
         return "Car{" +

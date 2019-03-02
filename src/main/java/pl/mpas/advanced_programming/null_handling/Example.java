@@ -68,4 +68,8 @@ public class Example {
                 .map(GraphicsCard::getChipset)
                 .map(Chipset::getVendorName);
     }
+
+
+
+
 }
