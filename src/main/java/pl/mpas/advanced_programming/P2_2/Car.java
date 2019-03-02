@@ -2,7 +2,7 @@ package pl.mpas.advanced_programming.P2_2;
 
 public class Car {
 
-    String brand, colour, model;
+    String brand, model, colour;
     int year;
     double capacity;
 
@@ -14,4 +14,5 @@ public class Car {
         this.year = year;
         this.capacity = capacity;
     }
+
 }
