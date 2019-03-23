@@ -16,7 +16,7 @@ public class CarTest {
     public static void main(String[] args) {
 
         Car car1 = new Car("Ford", "Fiesta", "blue", Year.of(2015), 2.4);
-        Car car2 = new Car("Ford",  "Fiesta", "red", Year.of(2017), 2.1);
+        Car car2 = new Car("Ford", "Fiesta", "red", Year.of(2017), 2.1);
         Car car3 = new Car("Kia", "Ceed", "pink", Year.of(2014), 1.7);
         Car car5 = new Car("Kia", "Bee", "pink", Year.of(2014), 1.7);
         Car car4 = new Car("BMW", "X5", "pink", Year.of(2019), 3.9);
@@ -73,8 +73,25 @@ public class CarTest {
 
 
 
+        Comparator<Car> myComparator = new Comparator<Car>() {
+            @Override
+            public int compare(Car o1, Car o2) {
+                return o1.getColour().compareTo(o2.getColour());
+            }
+        };
+
+        Comparator<Car> myComparator2 = (o1, o2) -> o1.getColour().compareTo(o2.getColour());
+
+        cars.sort(Comparator.comparing(Car::getBrand).thenComparing(Car::getModel));
+
+
+
+
+
+
+
+
 
     }
-
 
 }
